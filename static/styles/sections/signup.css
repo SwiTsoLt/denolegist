@@ -1,0 +1,61 @@
+.signup {
+    width: 100%;
+    height: fit-content;
+}
+
+.signup > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: var(--p-m);
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--main-clr-yellow);
+    padding: var(--p-m);
+    overflow: hidden;
+}
+
+.signup > a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 101%;
+    height: auto;
+    aspect-ratio: 1/1;
+    background-color: var(--main-clr-gray);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all var(--tr-l);
+}
+
+
+.signup > a:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.signup > a:hover > span {
+    background-image: url("../../media/navbar/phone-white.svg");
+}
+
+.signup > a:hover > p {
+    color: var(--main-clr-white);
+}
+
+.signup > a > span {
+    width: auto;
+    height: var(--line-h);
+    aspect-ratio: 1/1;
+    background-image: url("../../media/navbar/phone-black.svg");
+    transition: background-image var(--tr-l) ease;
+    z-index: 1;
+}
+
+.signup > a > p {
+    color: var(--text-clr);
+    transition: color var(--tr-l) ease;
+    z-index: 1;
+}

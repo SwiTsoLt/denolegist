@@ -1,0 +1,65 @@
+footer {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--main-clr-gray-2);
+    padding: 0 var(--p-m);
+}
+
+footer > .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    max-width: var(--container-w);
+    margin: 0 auto;
+}
+
+footer > .container > .breadcrumbs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    color: var(--main-clr-white);
+    word-spacing: var(--p-s);
+    padding: var(--p-m) 0;
+}
+
+footer > .container > .sitemap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: fit-content;
+    border: 2px solid var(--main-clr-yellow);
+    border-left: none;
+    border-right: none;
+    padding: var(--p-m) 0;
+}
+
+footer > .container > .sitemap > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+footer > .container > .sitemap > div > p {
+    color: var(--main-clr-white);
+    font-weight: bold;
+    padding-bottom: var(--p-m);
+}
+
+footer > .container > .sitemap > div > a,
+footer > .container > .breadcrumbs > a {
+    width: fit-content;
+    transition: color var(--tr-s) ease;
+}
+
+footer > .container > .sitemap > div > a:hover,
+footer > .container > .breadcrumbs > a:hover {
+    color: var(--main-clr-yellow);
+}
+
+footer > .container > small {
+    color: var(--main-clr-white);
+    padding: var(--p-m) 0;
+}

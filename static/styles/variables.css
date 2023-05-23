@@ -1,0 +1,31 @@
+:root {
+    --main-clr-white: #f5eeed;
+    --main-clr-yellow: #f0b97b;
+    --main-clr-yellow-2: #ebae5e;
+    --main-clr-gray: #48586e;
+    --main-clr-gray-2: #3a475a;
+
+    --nav-bg-clr: #00000020;
+    --text-wall-bg-clr: #000000bb;
+
+    --text-clr: #303030;
+
+    --nav-h: 140px;
+    --container-w: 1200px;
+    --backdrop-filter-blur: 2px;
+
+    --p-s: 10px;
+    --p-m: 20px;
+    --p-l: 30px;
+
+    --font-size-xs: 0.8em;
+    --font-size-s: 1em;
+    --font-size-m: 1.2em;
+    --font-size-l: 1.4em;
+    --font-size-xl: 2.4em;
+
+    --line-h: 1.6em;
+
+    --tr-s: 0.4s;
+    --tr-l: 0.8s;
+}

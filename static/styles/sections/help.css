@@ -1,0 +1,36 @@
+.help {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--main-clr-gray);
+}
+
+.help > .container {
+    width: 100%;
+    height: fit-content;
+    max-width: var(--container-w);
+    margin: 0 auto;
+    padding: var(--p-l) 0 var(--p-m) 0;
+}
+
+.help > .container > .content {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    border: 2px solid var(--main-clr-yellow);
+    padding: var(--p-l) var(--p-m) var(--p-m) var(--p-m);
+}
+
+.help > .container > .content > h1 {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -60%);
+    background-color: var(--main-clr-gray);
+    color: var(--main-clr-white);
+    letter-spacing: 2px;
+    padding: 0 var(--p-m);
+}
+
+.help > .container > .content > p {
+    color: var(--main-clr-white);
+}
