@@ -74,5 +74,5 @@ export default function Contacts() {
   );
 }
 
-// https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=cbeeee33-4a59-40bd-96bd-5ed0ddf6a330
+// https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=cbeeee33-4a59-40bd-96bd-5ed0ddf6a330
 // https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=cbeeee33-4a59-40bd-96bd-5ed0ddf6a330
