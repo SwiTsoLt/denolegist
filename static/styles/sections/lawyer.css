@@ -1,0 +1,35 @@
+.lawyer {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--main-clr-gray);
+}
+
+.lawyer > .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--p-m);
+    width: 100%;
+    height: fit-content;
+    min-height: calc(100vh - var(--nav-h) - var(--p-m));
+    padding-top: calc(var(--nav-h) + var(--p-m));
+}
+
+.lawyer > .container > .avatar {
+    width: 100%;
+    height: auto;
+}
+
+.lawyer > .container > .avatar > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.lawyer > .container > .about {
+    display: flex;
+    flex-direction: column;
+    grid-gap: var(--p-m);
+    width: 100%;
+    height: fit-content;
+    color: var(--main-clr-white);
+}

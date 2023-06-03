@@ -1,16 +1,24 @@
-import { MyHead, Navbar  } from "../components/_index.tsx";
-import Footer from "../islands/Footer.tsx"
-import {SignUpSection, HelpSection} from "../components/sections/_index.tsx";
+import { MyHead, Navbar } from "../components/_index.tsx";
+import MyFooter from "../islands/myFooter.tsx";
+import { SignUpSection, TextSection } from "../components/sections/_index.tsx";
+import {join, dirname} from "https://deno.land/std@0.177.1/path/mod.ts";
+
+export function getData(key: string): any {
+  const filePath = join(dirname.name, "../", "static", "data.json")
+  const file = Deno.readTextFileSync(filePath)
+  const fileParsed = JSON.parse(file)[key]
+  return fileParsed
+}
 
 export default function Home() {
   return (
     <>
       <MyHead
-        title="Legist"
+        title="Главная"
         styles={[
           { rel: "stylesheet", href: "/styles/main.css" },
           { rel: "stylesheet", href: "/styles/sections/signup.css" },
-          { rel: "stylesheet", href: "/styles/sections/help.css" }
+          { rel: "stylesheet", href: "/styles/sections/text.css" },
         ]}
       />
       <div class="home">
@@ -58,9 +66,16 @@ export default function Home() {
         </header>
         <main>
           <SignUpSection />
-          <HelpSection />
+          <TextSection
+            title="Кому мы оказываем помощь?"
+            text="Адвокаты Спец.ЮК оказывают правовую помощь по вопросам, возникающим
+            как в хозяйственной деятельности субъектов хозяйствования, так и
+            вопросам возникающим у физических лиц в сферах уголовного,
+            гражданского, семейного, административного, жилищного, земельного и
+            иных отраслей права. органах."
+          />
         </main>
-        <Footer />
+        <MyFooter />
       </div>
     </>
   );

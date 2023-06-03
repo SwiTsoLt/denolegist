@@ -25,6 +25,14 @@ body {
   background-position: center;
 }
 
+.container {
+  width: 100%;
+  height: fit-content;
+  max-width: var(--container-w);
+  margin: 0 auto;
+  padding: var(--p-m) 0;
+}
+
 a {
   color: var(--main-clr-white);
   text-decoration: none;
@@ -40,7 +48,7 @@ a {
 /* Scrollbar */
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -48,9 +56,9 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--main-clr-gray);
+  background: var(--main-clr-gray-2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--main-clr-gray-2);
+  background: #343e50;
 }

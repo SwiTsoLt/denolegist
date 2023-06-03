@@ -1,0 +1,15 @@
+.contacts {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--main-clr-gray);
+}
+
+.contacts > main {
+    width: 100%;
+    height: fit-content;
+}
+
+.contacts > main > .container > #map {
+    width: 500px;
+    height: 500px;
+}

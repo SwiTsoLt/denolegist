@@ -5,11 +5,7 @@
 }
 
 .help > .container {
-    width: 100%;
-    height: fit-content;
-    max-width: var(--container-w);
-    margin: 0 auto;
-    padding: var(--p-l) 0 var(--p-m) 0;
+    padding: calc(var(--p-m) * 2) 0 var(--p-m) 0;
 }
 
 .help > .container > .content {

@@ -32,13 +32,13 @@ export default function Navbar() {
           <a href="/">
             <p>Реквизиты</p>
           </a>
-          <a href="/">
+          <a href="/consultation">
             <p>О консультации</p>
           </a>
-          <a href="/">
+          <a href="/lawyers">
             <p>Адвокаты</p>
           </a>
-          <a href="/">
+          <a href="/contacts">
             <p>Контакты</p>
           </a>
         </div>

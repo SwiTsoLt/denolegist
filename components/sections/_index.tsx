@@ -1,4 +1,5 @@
 import SignUpSection from "./signup.tsx";
-import HelpSection from "./help.tsx";
+import TextSection from "./text.tsx";
+import TextImageSection from "./textImage.tsx";
 
-export {SignUpSection, HelpSection}
+export {SignUpSection, TextSection, TextImageSection}
