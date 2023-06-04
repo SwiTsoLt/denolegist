@@ -52,7 +52,7 @@ export default function Contacts() {
         scripts={[
           {
             src:
-              "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=93b1635b-e443-495e-817d-e2ea03775a9a",
+              "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=44c9bee0-efca-41a3-90a6-eb6dfe40c87c",
           },
         ]}
       />
