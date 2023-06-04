@@ -57,7 +57,7 @@ export default function Contacts() {
         scripts={[
           {
             src:
-              "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=cbeeee33-4a59-40bd-96bd-5ed0ddf6a330",
+              "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=93b1635b-e443-495e-817d-e2ea03775a9a",
           },
         ]}
       />
@@ -65,7 +65,29 @@ export default function Contacts() {
       <div className="contacts">
         <main>
           <div className="container">
-            <div id="map"></div>
+            <div className="contactsInner">
+              <div className="title">
+                <h2>
+                  Специализированная юридическая консультация по оказанию
+                  правовой помощи субъектам хозяйствования
+                </h2>
+              </div>
+              <div className="address">
+                <div className="icon bgimage"></div>
+                <a href="https://yandex.com/maps/-/CCUGZZqbTD" target="_blank">
+                  220029 г.Минск, ул. М.Богдановича 10
+                </a>
+              </div>
+              <div className="phone">
+                <div className="icon bgimage"></div>
+                <p>
+                  т/ф&nbsp;<a href="tel:+375172717722">+375 17 271 77 22</a>
+                </p>
+              </div>
+            </div>
+            <div className="map">
+              <div id="map"></div>
+            </div>
           </div>
         </main>
       </div>
@@ -74,5 +96,4 @@ export default function Contacts() {
   );
 }
 
-// https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=cbeeee33-4a59-40bd-96bd-5ed0ddf6a330
 // https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=cbeeee33-4a59-40bd-96bd-5ed0ddf6a330

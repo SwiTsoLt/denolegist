@@ -4,12 +4,76 @@
     background-color: var(--main-clr-gray);
 }
 
+.contacts a, .contacts p, .contacts span, .contacts h2 {
+    color: var(--main-clr-white);
+    font-weight: normal;
+}
+
+.contacts a {
+    transition: color var(--tr-s) ease;
+}
+
+.contacts a:hover {
+    color: var(--main-clr-yellow);
+}
+
 .contacts > main {
     width: 100%;
     height: fit-content;
 }
 
-.contacts > main > .container > #map {
-    width: 500px;
-    height: 500px;
+.contacts > main > .container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: var(--p-m);
+    padding-top: calc(var(--nav-h) + var(--p-m));
+}
+
+/* Contacts */
+
+.contacts > main > .container > .contactsInner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-right: 4px solid var(--main-clr-yellow);
+    padding-right: var(--p-m);
+}
+
+.contacts > main > .container > .contactsInner > .title {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: var(--p-m);
+}
+
+.contacts > main > .container > .contactsInner > .address,
+.contacts > main > .container > .contactsInner > .phone {
+    display: flex;
+    align-items: center;
+    grid-gap: var(--p-m);
+}
+
+/* Icons */
+
+.contacts > main > .container > .contactsInner > .address > .icon,
+.contacts > main > .container > .contactsInner > .phone > .icon {
+    width: auto;
+    height: var(--font-size-l);
+    aspect-ratio: 1/1;
+}
+
+.contacts > main > .container > .contactsInner > .address > .icon {
+    background-image: url("../media/contacts/map-marker.svg");
+}
+
+.contacts > main > .container > .contactsInner > .phone > .icon {
+    background-image: url("../media/contacts/phone.svg");
+}
+
+/* Map */
+
+.contacts > main > .container > .map {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
 }
