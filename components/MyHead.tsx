@@ -23,6 +23,7 @@ export default function MyHead(props: IMyHead) {
     { rel: "stylesheet", href: "/styles/variables.css" },
     { rel: "stylesheet", href: "/styles/zero.css" },
     { rel: "stylesheet", href: "/styles/navbar.css" },
+    { rel: "stylesheet", href: "/styles/navbarMobile.css" },
     { rel: "stylesheet", href: "/styles/footer.css" },
   ];
 

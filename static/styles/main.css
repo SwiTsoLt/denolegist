@@ -100,3 +100,11 @@ main {
     width: 100%;
     height: fit-content;
 }
+
+/* Media */
+
+@media screen and (max-width: 1000px) {
+    .home > nav + header {
+      padding-top: var(--p-m);
+    }
+  }

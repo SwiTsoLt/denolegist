@@ -9,9 +9,10 @@ import * as $2 from "./routes/contacts.tsx";
 import * as $3 from "./routes/index.tsx";
 import * as $4 from "./routes/lawyers.tsx";
 import * as $5 from "./routes/lawyers/[name].tsx";
-import * as $$0 from "./islands/gallery.tsx";
-import * as $$1 from "./islands/lawyer.tsx";
-import * as $$2 from "./islands/myFooter.tsx";
+import * as $$0 from "./islands/NavbarMobile.tsx";
+import * as $$1 from "./islands/gallery.tsx";
+import * as $$2 from "./islands/lawyer.tsx";
+import * as $$3 from "./islands/myFooter.tsx";
 
 const manifest = {
   routes: {
@@ -23,9 +24,10 @@ const manifest = {
     "./routes/lawyers/[name].tsx": $5,
   },
   islands: {
-    "./islands/gallery.tsx": $$0,
-    "./islands/lawyer.tsx": $$1,
-    "./islands/myFooter.tsx": $$2,
+    "./islands/NavbarMobile.tsx": $$0,
+    "./islands/gallery.tsx": $$1,
+    "./islands/lawyer.tsx": $$2,
+    "./islands/myFooter.tsx": $$3,
   },
   baseUrl: import.meta.url,
   config,
