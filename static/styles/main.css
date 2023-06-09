@@ -111,3 +111,9 @@ main {
         padding: 0;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .home>nav+header {
+        min-height: fit-content;
+    }
+}
