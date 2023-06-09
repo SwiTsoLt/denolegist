@@ -17,14 +17,11 @@ section.gallery > .container > .imageList {
   grid-column-gap: var(--p-m);
   width: fit-content;
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-}
-
-section.gallery > .container > .imageList.show {
-  overflow-x: auto;
   padding-bottom: var(--p-m);
+
 }
 
 section.gallery > .container > .imageList > a {

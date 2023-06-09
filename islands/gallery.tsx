@@ -32,20 +32,8 @@ export default function GallerySection(props: IGallerySectionProps) {
     });
   }
 
-  function resizePageSubscribe() {
-    if (imageListRef.current) {
-      imageListRef.current.addEventListener("scroll", () => {
-        imageListRef.current &&
-          setShowScrollbarPadding(
-            window.innerWidth <= imageListRef.current.scrollWidth
-          );
-      });
-    }
-  }
-
   useEffect(() => {
     bindFancybox();
-    resizePageSubscribe();
   }, []);
 
   return (
