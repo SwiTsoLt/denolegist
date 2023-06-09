@@ -5,17 +5,18 @@
 
 /* HEADER */
 
-.home > header {
+.home>header {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
-    height: 100vh;
-    padding: var(--nav-h) var(--p-m) 0 var(--p-m);
+    height: fit-content;
+    min-height: 100vh;
+    padding: var(--nav-h) var(--p-m) var(--p-m) var(--p-m);
 }
 
-.home > header > .bg {
+.home>header>.bg {
     position: absolute;
     left: 0;
     top: 0;
@@ -27,12 +28,12 @@
     z-index: -1;
 }
 
-.home > header > .container {
+.home>header>.container {
     background-color: var(--text-wall-bg-clr);
     padding: 0;
 }
 
-.home > header > .container > .title {
+.home>header>.container>.title {
     width: 100%;
     height: fit-content;
     background-color: var(--main-clr-white);
@@ -40,7 +41,7 @@
     padding: var(--p-m);
 }
 
-.home > header > .container > .text {
+.home>header>.container>.text {
     display: flex;
     flex-direction: column;
     grid-row-gap: var(--p-m);
@@ -48,47 +49,49 @@
     padding: var(--p-m);
 }
 
-.home > header > .container > .text > h1 {
+.home>header>.container>.text>h1 {
     text-align: center;
 }
 
-.home > header > .container > .text > ul {
+.home>header>.container>.text>ul {
     display: flex;
     flex-direction: column;
     grid-row-gap: var(--p-m);
     list-style: none;
 }
 
-.home > header > .container > .text > ul > li {
+.home>header>.container>.text>ul>li {
     display: flex;
     grid-column-gap: var(--p-m);
     width: fit-content;
 }
 
-.home > header > .container > .text > ul > li > span {
+.home>header>.container>.text>ul>li>span {
     width: auto;
     height: var(--line-h);
     aspect-ratio: 1/1;
 }
 
-.home > header > .container > .text > ul > li:nth-child(1) > span {
+.home>header>.container>.text>ul>li:nth-child(1)>span {
     background-image: url("../media/home/thisis/certificate.svg");
 }
-.home > header > .container > .text > ul > li:nth-child(2) > span {
+
+.home>header>.container>.text>ul>li:nth-child(2)>span {
     background-image: url("../media/home/thisis/check-list.svg");
 }
-.home > header > .container > .text > ul > li:nth-child(3) > span {
+
+.home>header>.container>.text>ul>li:nth-child(3)>span {
     background-image: url("../media/home/thisis/time.svg");
 }
 
-.home > header > .container > .text > p:last-child > a {
+.home>header>.container>.text>p:last-child>a {
     font-size: var(--font-size-s);
     border-bottom: 1px solid var(--main-clr-yellow);
     padding-bottom: 2px;
     transition: border-color var(--tr-s) ease;
 }
 
-.home > header > .container > .text > p:last-child > a:hover {
+.home>header>.container>.text>p:last-child>a:hover {
     border-color: var(--main-clr-white);
 }
 
@@ -104,7 +107,7 @@ main {
 /* Media */
 
 @media screen and (max-width: 1000px) {
-    .home > nav + header {
-      padding-top: var(--p-m);
+    .home>nav+header {
+        padding: 0;
     }
-  }
+}

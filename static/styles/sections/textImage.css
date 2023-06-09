@@ -24,6 +24,10 @@
     padding: var(--p-m);
 }
 
+.textImage > .container > h1 {
+    word-wrap: break-word;
+}
+
 .textImage > .container > h1,
 .textImage > .container > p {
     z-index: 1;
@@ -35,4 +39,34 @@
 
 .textImage > .container > p {
     text-align: justify;
+}
+
+.bg-pos-top {
+    background-position: top;
+}
+.bg-pos-right {
+    background-position: right;
+}
+.bg-pos-bottom {
+    background-position: bottom;
+}
+.bg-pos-left {
+    background-position: left;
+}
+.bg-pos-center {
+    background-position: center;
+}
+
+.isHeader {
+    padding-top: calc(var(--nav-h) + var(--p-m));
+}
+
+@media screen and (max-width: 600px) {
+    .textImage.bgimage {
+        padding: 0;
+    }
+
+    .textImage.bgimage.isHeader > .container {
+        padding-top: calc(var(--p-l) * 2);
+    }
 }

@@ -37,9 +37,9 @@ nav.navbarMobile>.container {
     background-color: var(--main-clr-gray);
     background-image: url("../media/navbar/settings.svg");
     background-size: 80%;
-    border: none;
-    border-right: 2px solid var(--main-clr-white);
-    border-bottom: 2px solid var(--main-clr-white);
+    border: 2px solid var(--main-clr-white);
+    border-left-color: transparent;
+    border-top-color: transparent;
     border-radius: 0 0 var(--border-radius) 0;
     transition: all var(--tr-l) ease;
     cursor: pointer;
@@ -47,9 +47,11 @@ nav.navbarMobile>.container {
 
 nav.navbarMobile.show>.toggleButton {
     transform: translateX(0);
-    border: none;
-    border-left: 2px solid var(--main-clr-white);
-    border-bottom: 2px solid var(--main-clr-white);
+    background-image: url("../media/navbar/cross.svg");
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-left-color: var(--main-clr-white);
+    border-bottom-color: var(--main-clr-white);
     border-radius: 0 0 0 var(--border-radius);
 }
 
@@ -159,6 +161,10 @@ nav.navbarMobile>.container>.address>a>.icon {
 }
 
 .links>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: var(--p-m);
     position: relative;
     width: 100%;
     height: fit-content;
@@ -184,11 +190,30 @@ nav.navbarMobile>.container>.address>a>.icon {
     transition: all var(--tr-l) ease;
 }
 
+.links>a>span.phoneIcon {
+    display: block;
+    width: auto;
+    height: var(--line-h);
+    background-image: url("../media/navbar/phone-black.svg");
+    aspect-ratio: 1/1;
+    transition: background-image var(--tr-l) ease;
+    z-index: 1;
+}
+
+.links>a>p {
+    text-align: center;
+}
+
 .links>a:hover>p {
     color: var(--text-clr);
 }
 
 .links>a:hover::before {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: var(--main-clr-yellow);   
+}
+
+.links>a:nth-child(2n):hover::before {
     transform: translate(-50%, -50%) scale(1.1);
     background-color: var(--main-clr-yellow-2);
 }
@@ -204,6 +229,10 @@ nav.navbarMobile>.container>.address>a>.icon {
 
 .links>a:first-child:hover>p {
     color: var(--main-clr-white);
+}
+
+.links>a:first-child:hover>span {
+    background-image: url("../media/navbar/phone-white.svg");
 }
 
 .links>a>p {

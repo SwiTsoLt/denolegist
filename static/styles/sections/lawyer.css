@@ -4,32 +4,70 @@
     background-color: var(--main-clr-gray);
 }
 
-.lawyer > .container {
+.lawyer>.container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: var(--p-m);
     width: 100%;
     height: fit-content;
-    min-height: calc(100vh - var(--nav-h) - var(--p-m));
-    padding-top: calc(var(--nav-h) + var(--p-m));
+    padding: 0;
 }
 
-.lawyer > .container > .avatar {
+.lawyer>.container>.avatar {
     width: 100%;
     height: auto;
+    padding: calc(var(--nav-h) + var(--p-m)) var(--p-m) 0 var(--p-m);
 }
 
-.lawyer > .container > .avatar > img {
+.lawyer>.container>.avatar>img {
     width: 100%;
     height: auto;
     object-fit: contain;
 }
 
-.lawyer > .container > .about {
+.lawyer>.container>.about {
     display: flex;
     flex-direction: column;
     grid-gap: var(--p-m);
     width: 100%;
     height: fit-content;
     color: var(--main-clr-white);
+    padding: calc(var(--nav-h) + var(--p-m)) var(--p-m) var(--p-m) var(--p-m);
+}
+
+/* Media */
+
+@media screen and (max-width: 1000px) {
+    .lawyer>.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lawyer>.container>.about>h1 {
+        text-align: center;
+    }
+
+    .lawyer>.container>.avatar,
+    .lawyer>.container>.about {
+        padding: var(--p-m);
+    }
+
+    .lawyer>.container>.avatar {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .lawyer>.container {
+        padding: 0;
+    }
+
+    .lawyer>.container>.avatar {
+        padding: 0;
+    }
+
+    .lawyer>.container>.about {
+        padding-top: 0;
+    }
 }

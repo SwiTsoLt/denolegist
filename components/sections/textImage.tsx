@@ -13,13 +13,11 @@ interface ITextImageSectionProps {
 export default function TextImageSection(props: ITextImageSectionProps) {
   return (
     <div
-      class="textImage bgimage"
+      class={`textImage bgimage ${
+        props.image.position ? "bg-pos-" + props.image.position : "center"
+      } ${props.isHeader ? "isHeader" : ""}`}
       style={`
       background-image: url(${props.image.src});
-      padding-top: ${
-        props.isHeader ? "calc(var(--nav-h) + var(--p-m))" : "var(--p-m)"
-      };
-      background-position: ${props.image.position ?? "center"};
       `}
     >
       <div className="wall"></div>

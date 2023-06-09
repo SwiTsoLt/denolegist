@@ -53,3 +53,11 @@ section.gallery > .container > .imageList::-webkit-scrollbar-thumb {
 section.gallery > .container > .imageList::-webkit-scrollbar-thumb:hover {
   background-color: var(--main-clr-yellow-2);
 }
+
+/* Media */
+
+@media screen and (max-width: 600px) {
+  section.gallery {
+    height: 280px;
+  }
+}

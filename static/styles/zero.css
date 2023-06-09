@@ -41,6 +41,7 @@ a {
 p,
 span,
 a {
+  text-align: justify;
   font-size: var(--font-size-m);
   line-height: var(--line-h);
 }
@@ -61,4 +62,15 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #343e50;
+}
+
+/* Media */
+
+@media screen and (max-width: 600px) {
+
+  p,
+  span,
+  a {
+    font-size: var(--font-size-s);
+  }
 }

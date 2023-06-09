@@ -5,28 +5,54 @@
 }
 
 .help > .container {
-    padding: calc(var(--p-m) * 2) 0 var(--p-m) 0;
+    padding: var(--p-m);
 }
 
 .help > .container > .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     width: 100%;
     height: fit-content;
+    padding: var(--p-m);
+}
+
+.help > .container > .content::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: calc(100% - 1em);
     border: 2px solid var(--main-clr-yellow);
-    padding: var(--p-l) var(--p-m) var(--p-m) var(--p-m);
 }
 
 .help > .container > .content > h1 {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%, -60%);
+    transform: translateY(calc(var(--line-h) / -1.25));
+    width: fit-content;
     background-color: var(--main-clr-gray);
+    text-align: center;
     color: var(--main-clr-white);
-    letter-spacing: 2px;
     padding: 0 var(--p-m);
+    z-index: 1;
 }
 
 .help > .container > .content > p {
     color: var(--main-clr-white);
+}
+
+@media screen and (max-width: 500px) {
+    .help > .container > .content {
+        padding: var(--p-m) 0 0 0;
+    }
+
+    .help > .container > .content::after {
+        display: none;
+    }
+
+    .help > .container > .content > h1 {
+        padding: 0;
+    }
 }
