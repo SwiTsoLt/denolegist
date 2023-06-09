@@ -1,7 +1,8 @@
-.lawyer {
+.navbarMobile + .lawyer {
     width: 100%;
     height: fit-content;
     background-color: var(--main-clr-gray);
+    padding: 0 var(--p-m);
 }
 
 .lawyer>.container {
@@ -16,7 +17,7 @@
 .lawyer>.container>.avatar {
     width: 100%;
     height: auto;
-    padding: calc(var(--nav-h) + var(--p-m)) var(--p-m) 0 var(--p-m);
+    padding: calc(var(--nav-h) + var(--p-m)) 0 var(--p-m) 0;
 }
 
 .lawyer>.container>.avatar>img {
@@ -32,7 +33,7 @@
     width: 100%;
     height: fit-content;
     color: var(--main-clr-white);
-    padding: calc(var(--nav-h) + var(--p-m)) var(--p-m) var(--p-m) var(--p-m);
+    padding: calc(var(--nav-h) + var(--p-m)) 0 var(--p-m) 0;
 }
 
 /* Media */
@@ -50,15 +51,25 @@
 
     .lawyer>.container>.avatar,
     .lawyer>.container>.about {
-        padding: var(--p-m);
+        padding: var(--p-m) 0;
     }
 
     .lawyer>.container>.avatar {
         max-width: 500px;
+        padding-bottom: 0;
+    }
+
+    .lawyer>.container>.about  {
+        padding-top: 0;
     }
 }
 
 @media screen and (max-width: 600px) {
+    .navbarMobile + .lawyer {
+        padding: 0;
+        padding-bottom: var(--p-m);
+    }
+
     .lawyer>.container {
         padding: 0;
     }
@@ -68,6 +79,6 @@
     }
 
     .lawyer>.container>.about {
-        padding-top: 0;
+        padding: 0 var(--p-m);
     }
 }
