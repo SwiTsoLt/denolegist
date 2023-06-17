@@ -1,12 +1,20 @@
 import { useState } from "preact/hooks";
+import { ILink } from "../components/Navbar.tsx";
 
-export default function NavbarMobile() {
-    const [showState, setShowState] = useState<boolean>(false)
+interface INavbarMobileProps {
+  dataLinks: ILink[];
+}
 
-    
+export default function NavbarMobile(props: INavbarMobileProps) {
+  const [showState, setShowState] = useState<boolean>(false);
+
   return (
-    <nav className={`navbarMobile ${showState ? 'show' : ''}`}>
-        <button onClick={() => setShowState(v => !v)} className="toggleButton bgimage"></button>
+    <nav className={`navbarMobile ${showState ? "show" : ""}`}>
+      <button
+        onClick={() => setShowState((v) => !v)}
+        className="toggleButton bgimage"
+      >
+      </button>
       <div className="container">
         <div className="logo">
           <div className="logoInner">
@@ -29,18 +37,13 @@ export default function NavbarMobile() {
             <span class="phoneIcon bgimage"></span>
             <p>Городской тел. 271 77 22</p>
           </a>
-          <a href="/">
-            <p>Реквизиты</p>
-          </a>
-          <a href="/consultation">
-            <p>О консультации</p>
-          </a>
-          <a href="/lawyers">
-            <p>Адвокаты</p>
-          </a>
-          <a href="/contacts">
-            <p>Контакты</p>
-          </a>
+          {props.dataLinks.map((link) => {
+            return (
+              <a href={link.url}>
+                <p>{link.name}</p>
+              </a>
+            );
+          })}
         </div>
       </div>
     </nav>

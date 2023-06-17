@@ -57,12 +57,19 @@
     background-position: center;
 }
 
-.isHeader {
+.textImage.bgimage.isHeader {
     padding-top: calc(var(--nav-h) + var(--p-m));
 }
 
+@media screen and (max-width: 1000px) {
+    .textImage.bgimage.isHeader {
+        padding-top: var(--p-m);
+    }
+}
+
 @media screen and (max-width: 600px) {
-    .textImage.bgimage {
+    .textImage.bgimage,
+    .textImage.bgimage.isHeader {
         padding: 0;
     }
 

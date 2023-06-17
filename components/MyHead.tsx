@@ -36,7 +36,7 @@ export default function MyHead(props: IMyHead) {
         <link rel={style.rel} href={style.href} />
       ))}
       {[...defaultScripts, ...props.scripts || []].map((script: IScript) => (
-        <script src={script.src} defer={script.defer} async={script.async} type={script.type || "text/javascript"} />
+        <script src={script.src} defer={script.defer} async={script.async} type={script.type ?? "text/javascript"} />
       ))}
     </Head>
   );

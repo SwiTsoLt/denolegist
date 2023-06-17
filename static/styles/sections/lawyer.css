@@ -1,6 +1,7 @@
 .navbarMobile + .lawyer {
     width: 100%;
     height: fit-content;
+    min-height: 100vh;
     background-color: var(--main-clr-gray);
     padding: 0 var(--p-m);
 }

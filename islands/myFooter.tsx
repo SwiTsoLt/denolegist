@@ -67,10 +67,10 @@ export default function MyFooter(props: IMyFooterProps) {
           <div className="sitemap">
             <strong>Карта сайта</strong>
             <a href="/">Главная</a>
+            <a href="https://moka.by/index.php/rekvizity" target="_blank">Реквизиты</a>
             <a href="/consultation">О консультации</a>
-            <a href="">Адвокаты</a>
-            <a href="">Реквизиты</a>
-            <a href="">Контакты</a>
+            <a href="/lawyers">Адвокаты</a>
+            <a href="/contacts">Контакты</a>
           </div>
           <div className="address">
             <strong>Наш адрес</strong>

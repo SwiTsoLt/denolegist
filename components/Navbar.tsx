@@ -1,6 +1,18 @@
 import NavbarMobile from "../islands/NavbarMobile.tsx";
 
+export interface ILink {
+  name: string;
+  url: string;
+}
+
 export default function Navbar() {
+  const dataLinks: ILink[] = [
+    { name: "Реквизиты", url: "https://moka.by/index.php/rekvizity" },
+    { name: "О консультации", url: "/consultation" },
+    { name: "Адвокаты", url: "/lawyers" },
+    { name: "Контакты", url: "/contacts" },
+  ];
+
   return (
     <>
       <nav class="navbarDesktop">
@@ -32,22 +44,17 @@ export default function Navbar() {
               <span class="phoneIcon bgimage"></span>
               <p>Городской тел. 271 77 22</p>
             </a>
-            <a href="/">
-              <p>Реквизиты</p>
-            </a>
-            <a href="/consultation">
-              <p>О консультации</p>
-            </a>
-            <a href="/lawyers">
-              <p>Адвокаты</p>
-            </a>
-            <a href="/contacts">
-              <p>Контакты</p>
-            </a>
+            {dataLinks.map((link) => {
+              return (
+                <a href={link.url}>
+                  <p>{link.name}</p>
+                </a>
+              );
+            })}
           </div>
         </div>
       </nav>
-      <NavbarMobile />
+      <NavbarMobile dataLinks={dataLinks} />
     </>
   );
 }

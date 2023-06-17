@@ -20,6 +20,8 @@
 .contacts > main {
     width: 100%;
     height: fit-content;
+    padding: 0 var(--p-m);
+
 }
 
 .contacts > main > .container {
@@ -43,6 +45,7 @@
 .contacts > main > .container > .contactsInner > .title {
     width: 100%;
     height: fit-content;
+    text-align: center;
     padding-bottom: var(--p-m);
 }
 
@@ -75,5 +78,23 @@
 .contacts > main > .container > .map {
     width: 100%;
     height: auto;
-    aspect-ratio: 1/1;
+}
+
+.contacts > main > .container > .map > #map {
+    width: 100%;
+    height: auto;
+}
+
+/* Media */
+
+@media screen and (max-width: 800px) {
+    .contacts > main > .container {
+        display: flex;
+        flex-direction: column;
+        padding-top: calc(var(--p-m) * 3);
+    }
+
+    .contacts > main > .container > .contactsInner {
+        border: none;
+    }
 }

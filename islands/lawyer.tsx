@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "preact/hooks";
 import { ILawyer } from "../routes/lawyers.tsx";
+import { DOMParser } from "https://deno.land/x/deno_dom@v0.1.38/deno-dom-wasm.ts";
 
 interface ILawyerProps {
   name: string;
@@ -7,33 +8,15 @@ interface ILawyerProps {
 }
 
 export default function Lawyer(props: ILawyerProps) {
-  const [lawyer, setLawyer] = useState<ILawyer>({
-    name: "",
-    imageName: "",
-    linkName: "",
-    about: "",
-  });
   const aboutRef = useRef<HTMLParagraphElement>(null);
 
-  function getLawyer(name: string) {
-    const candidate: ILawyer = props.lawyersData.filter(
-      (l: ILawyer) => l.linkName === name
-    )[0];
-    setLawyer(candidate);
-  }
+  const lawyer: ILawyer =
+    props.lawyersData.filter((l: ILawyer) => l.linkName === props.name)[0];
 
-  function setAboutInfo() {
+  useEffect(() => {
     if (aboutRef.current) {
-      aboutRef.current.innerHTML = lawyer.about
+      aboutRef.current.innerHTML = lawyer.about;
     }
-  }
-
-  useEffect(() => {
-    setAboutInfo();
-  }, [lawyer])
-
-  useEffect(() => {
-    getLawyer(props.name);
   }, []);
 
   return (
@@ -44,7 +27,7 @@ export default function Lawyer(props: ILawyerProps) {
         </div>
         <div className="about">
           <h1>{lawyer.name}</h1>
-          <p ref={aboutRef}></p>
+          <p ref={aboutRef}>Загрузка...</p>
         </div>
       </div>
     </div>
